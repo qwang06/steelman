@@ -1,0 +1,395 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Alegreya Sans", sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(assets/background-pattern.png)
+}
+
+header {
+    width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo, .cart, .search, .right-arrow {
+    background: url(assets/spritesheet.png) no-repeat 0 0;
+}
+
+.header-bg {
+    background-color: #211306;
+    position: relative;
+    color: white;
+}
+
+.header-bg:before, .header-bg:after {
+    content: "";
+    position: absolute;
+    background: #211306;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+}
+
+.header-bg:before {
+    right: 100%;
+}
+
+.header-bg:after {
+    left: 100%;
+}
+
+.account {
+    margin-left: 800px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cart {
+    background-position: -300px 0;
+    width: 19px;
+    height: 16px;
+    display: inline-block;
+    margin: 0 20px 0 20px;
+}
+
+.search {
+    background-position: -350px 0;
+    width: 19px;
+    height: 16px;
+    display: inline-block;
+}
+
+.logo {
+    background-position: 0 0;
+    width: 258px;
+    height: 61px;
+    display: inline-block;
+    margin: 0 40px -25px 0;
+}
+
+nav a {
+    margin: 0 30px 50px 0;
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav a:hover, nav a:active {
+    color: #d57626;
+}
+
+.caret {
+    font-size: 9px;
+}
+
+/* start Main */
+.office-text {
+    color: white;
+    position: absolute;
+    top: 265px;
+    left: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.office-text h1 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    margin: 0;
+}
+
+.office-text p {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 28px;
+    display: inline-block;
+    width: 350px;
+}
+
+.shop-now {
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    width: 140px;
+    height: 40px;
+    font-size: 21px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 30px;
+    margin: -30px 0 0 80px;
+}
+
+.office-caddy {
+    background: url(assets/office-caddy.jpg) no-repeat 0 0;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: 100%;
+    height: 507px;
+    display: block;
+    margin: 0 auto;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.gallery {
+    color: #38230e;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.title-small {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-style: italic;
+    font-size: 21px;
+}
+
+.gallery h2 {
+    text-transform: uppercase;
+    font-size: 37px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.gallery hr {
+    border: 0;
+    border-top: 3px solid #a2a09e;
+    width: 300px;
+}
+
+.gallery p {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 21px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-images div {
+    float: left;
+    margin: 20px 20px 0 0;
+    background: #d57626;
+    position: relative;
+}
+
+.gallery-images div:last-child {
+    margin-right: 0;
+}
+
+.gallery-images img {
+    display: block;
+}
+
+.gallery-images div:hover img {
+    opacity: .15;
+}
+
+.more-collections {
+    font-family: "Alegreya Sans SC", sans-serif;
+    color: #a2a09e;
+    font-size: 21px;
+    margin: 30px 0 30px 0;
+    display: inline-block;
+}
+
+.gradient-top, .gradient-bot {
+    height: 15px;
+    opacity: .175;
+    margin-bottom: -10px;
+}
+
+.gradient-top {
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(
+        center top, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(
+        center top, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* Opera */ 
+    background-image: -o-radial-gradient(
+        center top, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(
+        radial, 
+        center top, 0, 
+        center bottom, 477, 
+        color-stop(0, rgba(0,0,0,1)), 
+        color-stop(1, rgba(0,0,0,0))
+    );
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(
+        center top, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(
+        ellipse farthest-side at center top,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0) 100%
+    );
+}
+
+.gradient-bot {
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(
+        center bottom, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(
+        center bottom, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* Opera */ 
+    background-image: -o-radial-gradient(
+        center bottom, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(
+        radial, 
+        center bottom, 0, 
+        center bottom, 477, 
+        color-stop(0, rgba(0,0,0,1)), 
+        color-stop(1, rgba(0,0,0,0))
+    );
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(
+        center bottom, 
+        ellipse farthest-side, 
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(
+        ellipse farthest-side at center bottom,
+        rgba(0,0,0,1) 0%, 
+        rgba(0,0,0,0) 100%
+    );
+}
+
+.main-container > hr {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: -999px;
+    width: 9999px;
+    opacity: 0.7;
+}
+
+.product {
+    font-family: "Alegreya Sans", sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    color: #a2a09e;
+    position: relative;
+    line-height: 1;
+}
+
+.product h2 {
+    font-family: "Alegreya Sans", sans-serif;
+    font-style: normal;
+    font-size: 37px;
+    text-transform: uppercase;
+    color: #d57626;
+    margin: 5px 0 5px 0;
+}
+
+.product hr {
+    border: 0;
+    border-top: 3px solid #a2a09e;
+    width: 240px;
+    margin: 0 auto 15px auto;
+}
+
+.product hr:first-child {
+    margin: 15px auto 0 auto;
+}
+
+.product1 {
+    width: 320px;
+    background-color: #dfddda;
+    height: 260px;
+    text-align: center;
+}
+
+.product1:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.product1, .product2 {
+    float: left;
+}
+
+.product-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product2 {
+    margin-right: 20px;
+}
+
+.product-subtext {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.right-arrow {
+    background-position: 0 -100px;
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
