@@ -9,6 +9,7 @@ body {
     background-image: url(assets/background-pattern.png)
 }
 
+/* ======================= start Header ======================= */
 header {
     width: 960px;
     margin: 0 auto;
@@ -131,6 +132,7 @@ nav a:hover, nav a:active {
     background-color: rgba(255, 255, 255, .25);
     padding: 1px;
     position: fixed;
+    z-index: 999;
     left: 100%;
     margin: 20px 0 0 -47px;
 }
@@ -173,8 +175,9 @@ nav a:hover, nav a:active {
 .pinterest:hover {
     background-position: -550px -150px;
 }
+/* ======================= end Header ======================= */
 
-/* start Main */
+/* ==================== start index Main ==================== */
 .office-text {
     color: white;
     position: absolute;
@@ -517,9 +520,9 @@ nav a:hover, nav a:active {
     margin-left: 5px;
 }
 
-/* end Main */
+/* ==================== end index Main ==================== */
 
-/* start Footer */
+/* ===================== start Footer ===================== */
 footer > hr {
     margin-bottom: 0;
     border-bottom: 1px solid #7f7f7f;
@@ -768,11 +771,21 @@ footer > hr {
     margin-top: 40px;
     display: inline-block;
 }
-/* end Footer */
+/* ===================== end Footer ===================== */
 
-
-
-
+/* ============= start parent-category main ============= */
+.athletes-banner {
+    background: url(assets/athletes.jpg) no-repeat 0 0;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: 100%;
+    height: 140px;
+    display: block;
+    margin: 0 auto;
+}
+/* ============== end parent-category main ============== */
 
 
 
