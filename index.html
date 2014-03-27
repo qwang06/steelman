@@ -2,14 +2,13 @@
 <html>
 <head>
     <title>Steelman 24</title>
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,400italic|Alegreya+Sans:400,500,700,800,400italic,300italic' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700,400italic|Lato|Alegreya+Sans:300,400,500,700,800,400italic,300italic,500italic' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
         <section class="header-bg">
-            <span class="account">Account</span><span class="cart"></span><span class="search"></span>
+            <a href="#" class="account">Account</a><a href="#" class="cart"></a><a href="#" class="search"></a>
             <nav>
                 <span class="logo"></span>
                 <a href="#">Athletes</a>
@@ -17,21 +16,35 @@
                 <a href="#">Leisure</a>
                 <a href="#">On Wheels</a>
                 <a href="#">Professionals</a>
-                <a href="#">More<span class="caret">&#9660;</span></a>
+                <div class="more-menu">
+                    <a href="#">More <span class="caret">&#9660;</span></a>
+                    <ul>
+                        <li><a href="#">New Items</a></li>
+                        <li><a href="#">Holidays</a></li>
+                        <li><a href="#">Gifts</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <a href="#" class="instagram"></a>
+                    <a href="#" class="facebook"></a>
+                    <a href="#" class="twitter"></a>
+                    <a href="#" class="pinterest"></a>
+                </div>
             </nav>
         </section>
     </header>
     
     <main>
-        <div class="office-caddy">
+        <div class="office-caddy"> <!-- start .office-caddy -->
             <div class="office-text">
                 <h1>The Perfect Gift</h1>
                 <p>Our unique, handmade steel sculptures make great presents for your cube-mate or boss!</p>
                 <br>
-                <span class="shop-now">Shop Now</span>
+                <a href="#" class="shop-now-btn">Shop Now</a>
             </div>
-        </div>
-        <div class="main-container">
+        </div><!-- end .office-caddy -->
+        <div class="main-container"> <!-- start .main-container -->
             <div class="gradient-top"></div>
             <div class="gallery">
                 <span class="title-small">Steelman 24</span>
@@ -41,67 +54,77 @@
                 <p>Our metal figures are elaborately handcrafted and made in Germany.<br>
     Each individual product is unique and exceeds the highest quality standards.</p>
                 <div class="gallery-images">
-                    <div><img src="assets/gallery-image1.jpg"></div>
-                    <div><img src="assets/gallery-image2.jpg"></div>                    
-                    <div><img src="assets/gallery-image3.jpg"></div>
-                    <div><img src="assets/gallery-image4.jpg"></div>
-                    <span class="more-collections">View more collections</span>
+                    <div>
+                        <img src="assets/gallery-image1.jpg" alt="Sports">
+                        <span>Sports <a href="#" class="view-more-btn">View More</a></span>
+                    </div>
+                    <div>
+                        <img src="assets/gallery-image2.jpg" alt="Guns">
+                        <span>Guns <a href="#" class="view-more-btn">View More</a></span>
+                    </div>
+                    <div>
+                        <img src="assets/gallery-image3.jpg" alt="Work">
+                        <span>Work <a href="#" class="view-more-btn">View More</a></span>
+                    </div>
+                    <div>
+                        <img src="assets/gallery-image4.jpg" alt="Leisure">
+                        <span>Leisure <a href="#" class="view-more-btn">View More</a></span>
+                    </div>
+                    <a href="#" class="gallery-left"></a><span class="more-collections">View more collections</span><a href="#" class="gallery-right"></a>
                 </div>
             </div>
             <div class="gradient-bot"></div>
             <hr>
             <div class="product group1">
                 <div class="product1">
-                    <div class="product-text">
+                    <a href="#" class="product-text">
                         Just in time for
                         <hr>
                         <h2>Father's Day</h2>
                         <hr>
                         <p class="product-subtext">Check out our gift ideas for dads<span class="right-arrow"></span></p>
-                    </div>
+                    </a>
                 </div>
                 <div class="product2">
-                    <img src="assets/poker.jpg">
+                    <a href="#"><img src="assets/poker.jpg" alt="Poker"></a>
                 </div>
                 <div class="product3">
-                    <img src="assets/baseball.jpg">
+                    <a href="#"><img src="assets/baseball.jpg" alt="Baseball"></a>
                 </div>
             </div>
             <div class="product group2">
                 <div class="product1">
-                    <div class="product-text">
-                        Just in time for
+                    <a href="#" class="product-text">
                         <hr>
-                        <h2>Father's Day</h2>
+                        <h2>New Items</h2>
                         <hr>
-                        <p class="product-subtext">Check out our gift ideas for dads<span class="right-arrow"></span></p>
-                    </div>
+                        <p class="product-subtext">Brand new, personalized gifting ideas<span class="right-arrow"></span></p>
+                    </a>
                 </div>
                 <div class="product2">
-                    <img src="assets/couple.jpg">
+                    <a href="#"><img src="assets/couple.jpg" alt="Couple"></a>
                 </div>
                 <div class="product3">
-                    <img src="assets/biker.jpg">
+                    <a href="#"><img src="assets/biker.jpg" alt="Biker"></a>
                 </div>
             </div>
             <div class="product group3">
                 <div class="product1">
-                    <div class="product-text">
-                        Just in time for
+                    <a href="#" class="product-text">
                         <hr>
-                        <h2>Father's Day</h2>
+                        <h2>Home Collection</h2>
                         <hr>
-                        <p class="product-subtext">Check out our gift ideas for dads<span class="right-arrow"></span></p>
-                    </div>
+                        <p class="product-subtext">Useful gifts<span class="right-arrow"></span></p>
+                    </a>
                 </div>
                 <div class="product2">
-                    <img src="assets/home-collection1.jpg">
+                    <a href="#"><img src="assets/home-collection1.jpg" alt="Home Collection"></a>
                 </div>
                 <div class="product3">
-                    <img src="assets/home-collection2.jpg">
+                    <a href="#"><img src="assets/home-collection2.jpg" alt="Home Collection"></a>
                 </div>
             </div>
-        </div>
+        </div><!-- end .main-container -->
     </main>
     
     <footer>
@@ -116,9 +139,101 @@
                 <span>Story</span>
             </div>
         </div>
-        <div class="steelman-info"></div>
-        <div class="newsletter"></div>
-        <div class="footer"></div>
+        <div class="steelman-info">
+            <div class="handmade">
+                <div class="handmade icon"></div>
+                <h3>100% Handmade</h3>
+                <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+            </div>
+            <div class="crafted">
+                <div class="crafted icon"></div>
+                <h3>Skillfully Crafted</h3>
+                <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+            </div>
+            <div class="perfect">
+                <div class="perfect icon"></div>
+                <h3>The Perfect Gift</h3>
+                <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+            </div>
+        </div>
+        <div class="newsletter">
+            <p>Sign up for our newsletter to hear about the latest models and get great deals!</p>
+            <input type="email" name="email" placeholder="your email address">
+            <div class="go-btn"></div>
+        </div>
+        <div class="footer">
+            <div>
+                <div class="footer-logo"></div>
+                <ul>Steelman 24
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gifting</a></li>
+                </ul>
+                <ul>Support
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns &amp; Exchanges</a></li>
+                    <li><a href="#">Track an Order</a></li>
+                </ul>
+                <ul>Account
+                    <li><a href="#">Address Book</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+                <ul>Social Media
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+                <ul>Custom Orders
+                    <li><a href="#">Get Started</a></li>
+                    <li><a href="#">Learn More</a></li>
+                </ul>
+            </div>
+            <div class="categories"><!-- start .categories -->
+                <h4>Categories</h4>
+                <hr>
+                <ul>Athletes
+                    <li><a href="#">Ball Games</a></li>
+                    <li><a href="#">Combat Sports</a></li>
+                    <li><a href="#">Equestrian Sports</a></li>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Pub Games</a></li>
+                    <li><a href="#">Shooting Sports</a></li>
+                    <li><a href="#">Water Sports</a></li>
+                </ul>
+                <ul>Home &amp; Living
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Office</a></li>
+                    <li><a href="#">Wine &amp; Spirits</a></li>
+                </ul>
+                <ul>Leisure
+                    <li><a href="#">Musicians</a></li>
+                    <li><a href="#">Great Outdoors</a></li>
+                </ul>
+                <ul>On Wheels
+                    <li><a href="#">Four Wheels</a></li>
+                    <li><a href="#">Two Wheels</a></li>
+                </ul>
+                <ul>Professionals
+                    <li><a href="#">Automotive</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Craftsman</a></li>
+                    <li><a href="#">Medical</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                    <li><a href="#">Servicemen</a></li>
+                </ul>
+                <ul>More
+                    <li><a href="#">New Items</a></li>
+                    <li><a href="#">Holidays</a></li>
+                    <li><a href="#">Gifts</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div><!-- end .categories -->
+            <span class="copyright">&copy; 2014 Steelman 24. All rights reserved.</span>
+        </div>
     </footer>
 </body>
 </html>
