@@ -268,26 +268,26 @@ nav a:hover, nav a:active {
     margin: 0 auto;
 }
 
-.gallery-images div {
+.gallery-images div, .parent-images div {
     float: left;
     margin: 20px 20px 0 0;
     background: #d57626;
     position: relative;
 }
 
-.gallery-images div:last-child {
+.gallery-images div:last-child, .parent-images div:last-child {
     margin-right: 0;
 }
 
-.gallery-images img {
+.gallery-images img, .parent-images img {
     display: block;
 }
 
-.gallery-images div:hover img {
+.gallery-images div:hover img, .parent-images div:hover img  {
     opacity: .15;
 }
 
-.gallery-images div span {
+.gallery-images div span, .parent-images div span  {
     display: none;
     position: absolute;
     width: 50%;
@@ -300,7 +300,7 @@ nav a:hover, nav a:active {
     text-transform: uppercase;
 }
 
-.gallery-images div:hover span {
+.gallery-images div:hover span, .parent-images div:hover span {
     display: block;
 }
 
@@ -784,6 +784,31 @@ footer > hr {
     height: 140px;
     display: block;
     margin: 0 auto;
+}
+
+.secondary-nav {
+    font-family: "Myriad Pro", serif;
+    font-size: 14px;
+    color: #423c3c;
+    margin: 40px 0 30px 0;
+    word-spacing: 3px;
+}
+
+.secondary-nav a {
+    font-family: "Myriad Pro", serif;
+    font-size: 14px;
+    color: #423c3c;
+    margin: 0;
+    text-transform: none;
+}
+
+.secondary-nav span {
+    color: #d57626;
+}
+
+.parent-images div span {
+    left: 100px;
+    top: 140px;
 }
 /* ============== end parent-category main ============== */
 
