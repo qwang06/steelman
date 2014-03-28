@@ -28,12 +28,13 @@ a {
 
 .logo, .cart, .search, .right-arrow, .icon, .go-btn,
 .footer-logo, .gallery-left, .gallery-right,
-.instagram, .facebook, .twitter, .pinterest {
+.instagram, .facebook, .twitter, .pinterest,
+.shipping-icon, .shipping-right {
     background: url(assets/spritesheet.png) no-repeat 0 0;
 }
 
 .header-bg {
-    background-color: #222021;
+    background-color: #201205;
     position: relative;
     color: white;
 }
@@ -41,7 +42,7 @@ a {
 .header-bg:before, .header-bg:after {
     content: "";
     position: absolute;
-    background: #222021;
+    background: #201205;
     top: 0;
     bottom: 0;
     width: 9999px;
@@ -52,6 +53,29 @@ a {
 }
 
 .header-bg:after {
+    left: 100%;
+}
+
+.header-border {
+    background-color: #fcf9f4;
+    position: relative;
+    height: 1px;
+}
+
+.header-border:before, .header-border:after {
+    content: "";
+    position: absolute;
+    background: #fcf9f4;
+    top: 0;
+    bottom: 0;
+    width: 9999px;
+}
+
+.header-border:before {
+    right: 100%;
+}
+
+.header-border:after {
     left: 100%;
 }
 
@@ -124,6 +148,7 @@ nav a:hover, nav a:active {
 .more-menu:hover ul {
     display: block;
     position: absolute;
+    z-index: 999;
     top: 5px;
     background-color: #222021;
 }
@@ -268,14 +293,14 @@ nav a:hover, nav a:active {
     margin: 0 auto;
 }
 
-.gallery-images div, .parent-images div {
+.gallery-images > div, .parent-images > div {
     float: left;
     margin: 20px 20px 0 0;
     background: #d57626;
     position: relative;
 }
 
-.gallery-images div:last-child, .parent-images div:last-child {
+.gallery-images > div:last-child, .parent-images > div:last-child {
     margin-right: 0;
 }
 
@@ -283,15 +308,14 @@ nav a:hover, nav a:active {
     display: block;
 }
 
-.gallery-images div:hover img, .parent-images div:hover img  {
+.gallery-images > div:hover img, .parent-images > div:hover img  {
     opacity: .15;
 }
 
-.gallery-images div span, .parent-images div span  {
+.gallery-images > div > span, .parent-images > div > span  {
     display: none;
     position: absolute;
-    width: 50%;
-    left: 25%;
+    width: 100%;
     font-weight: 500;
     font-size: 21px;
     font-style: italic;
@@ -300,7 +324,7 @@ nav a:hover, nav a:active {
     text-transform: uppercase;
 }
 
-.gallery-images div:hover span, .parent-images div:hover span {
+.gallery-images > div:hover > span, .parent-images > div:hover > span {
     display: block;
 }
 
@@ -578,7 +602,7 @@ footer > hr {
 }
 
 .steelman-info > div {
-    width: 26%;
+    width: 340px;
     display: inline-block;
     margin: 40px auto 35px auto;
     color: #222021;
@@ -773,7 +797,7 @@ footer > hr {
 }
 /* ===================== end Footer ===================== */
 
-/* ============= start parent-category main ============= */
+/* ============= start parent-category Main ============= */
 .athletes-banner {
     background: url(assets/athletes.jpg) no-repeat 0 0;
     -webkit-background-size: cover;
@@ -806,11 +830,240 @@ footer > hr {
     color: #d57626;
 }
 
-.parent-images div span {
-    left: 100px;
-    top: 140px;
+.athletes-info, .free-shipping {
+    width: 300px;
+    height: 260px;
+    padding-top: 40px;
+    background-color: #201205 !important;
 }
-/* ============== end parent-category main ============== */
+
+.athletes-info hr {
+    border: 0;
+    border-top: 3px solid #a2a09e;
+    width: 240px;
+    margin: 0 auto 10px auto;
+}
+
+.parent-images {
+    margin-bottom: 20px;
+}
+
+.parent-images h2 {
+    color: #d57626;
+    font-size: 37px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.athletes-info ul {
+    list-style: none;
+    color: #c5c0bc;
+    text-align: center;
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+
+.parent-images > div > span {
+    top: 140px;
+    text-align: center;
+}
+
+.shipping-icon {
+    background-position: 0 -400px;
+    width: 71px;
+    height: 56px;
+    display: inline-block;
+}
+
+.free-shipping {
+    padding-top: 55px;
+    height: 245px;
+    color: #c5c0bc;
+    text-align: center;
+}
+
+.free-shipping p {
+    margin: 0 25px 0 27px;
+    text-align: left;
+    line-height: 20px;
+}
+
+.shipping-right {
+    background-position: 0 -150px;
+    width: 8px;
+    height: 12px;
+    display: inline-block;
+}
+/* ============== end parent-category Main ============== */
+
+/* ================== start about Main ================== */
+.about-banner {
+    background: url(assets/office-caddy2.jpg) no-repeat 0 0;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: 1100px;
+    height: 140px;
+    display: block;
+    margin: 0 auto 40px auto;
+    position: relative;
+}
+
+.about-banner:before, .about-banner:after {
+    position: absolute;
+    content: "";
+    top:0;
+    bottom: 0;
+    background-color: #fcf9f4;
+    width: 9999px;
+}
+
+.about-banner:before {
+    right: 100%;
+}
+
+.about-banner:after {
+    left: 100%;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.main-container > hr {
+    border: 0;
+    border-top: 3px solid #a2a09e;
+    width: 960px;
+    margin: 0;
+}
+
+.about.main-container > hr:nth-of-type(3) {
+    width: 622px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.main-container > h1 {
+    font-size: 37px;
+    text-transform: uppercase;
+    color: #d57626;
+    margin: 5px 0 5px 0;
+}
+
+.about.main-container > h2 {
+    font-size: 37px;
+    width: 410px;
+    color: #211306;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0 0 0;
+}
+
+.about.main-container > p {
+    width: 622px;
+    display: inline-block;
+}
+/* ================== end about Main ================== */
+
+/* ================ start contact Main ================ */
+.contact.main-container, .support.main-container {
+    margin-top: 75px;
+}
+
+.contact-img, .contact-forms {
+    margin-top: 10px;
+}
+
+.contact-img {
+    width: 48%;
+    display: inline-block;
+}
+
+.contact-forms {
+    color: #423c3c;
+    font-size: 14px;
+    width: 48%;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 35px;
+    vertical-align: top;
+}
+
+.contact-forms p {
+    margin-bottom: 5px;
+}
+
+.contact-forms input, .contact-forms textarea {
+    width: 207px;
+    height: 36px;
+    font-size: 14px;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #919191;
+    margin: 15px 0 0 0;
+}
+
+.contact-forms ::-webkit-input-placeholder {
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.contact-forms :-moz-placeholder { /* Firefox 18- */
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.contact-forms ::-moz-placeholder {  /* Firefox 19+ */
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.contact-forms :-ms-input-placeholder {
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.contact-forms input:nth-of-type(even), .contact-forms input:nth-of-type(5) {
+    float: right;
+}
+
+.contact-forms input:nth-of-type(5) {
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    text-transform: uppercase;
+    background-color: #d57626;
+    font-weight: 600;
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+}
+
+.contact-forms textarea {
+    width: 438px;
+    height: 154px;
+    padding: 10px 10px 10px 10px;
+}
+
+/* ================= end contact Main ================= */
+
+/* ================ start support Main ================ */
+
+/* ================= end support Main ================= */
 
 
 
