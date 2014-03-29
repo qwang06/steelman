@@ -27,9 +27,10 @@ a {
 }
 
 .logo, .cart, .search, .right-arrow, .icon, .go-btn,
-.footer-logo, .gallery-left, .gallery-right,
+.footer-logo, .gallery-left, .gallery-right, .ac-caret,
 .instagram, .facebook, .twitter, .pinterest,
-.shipping-icon, .shipping-right {
+.shipping-icon, .shipping-right, .support-shipping a,
+.support-faq a, .support-returns a, .support-track a {
     background: url(assets/spritesheet.png) no-repeat 0 0;
 }
 
@@ -108,13 +109,13 @@ a {
     margin: 0 40px -25px 0;
 }
 
-nav a {
+nav > a {
     margin: 0 25px 50px 0;
     display: inline-block;
     text-transform: uppercase;
 }
 
-nav a:hover, nav a:active {
+nav > a:hover, nav > a:active {
     color: #d57626;
 }
 
@@ -933,7 +934,8 @@ footer > hr {
     text-align: center;
 }
 
-.main-container > hr {
+.about.main-container > hr, .contact.main-container > hr,
+.support.main-container > hr {
     border: 0;
     border-top: 3px solid #a2a09e;
     width: 960px;
@@ -1058,12 +1060,174 @@ footer > hr {
     height: 154px;
     padding: 10px 10px 10px 10px;
 }
-
 /* ================= end contact Main ================= */
 
 /* ================ start support Main ================ */
+.support.main-container > div {
+    display: inline-block;
+    width: 230px;
+    margin: 45px 0 45px 0;
+}
 
+.support-shipping a, .support-track a, 
+.support-returns a, .support-faq a {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.support-shipping a {
+    background-position: -400px -400px;
+}
+
+.support-faq a {
+    background-position: -300px -400px;
+}
+
+.support-returns a {
+    background-position: -200px -400px;
+}
+
+.support-track a {
+    background-position: -100px -400px;
+}
+
+.support-shipping a:hover {
+    background-position: -400px -500px;
+}
+
+.support-faq a:hover {
+    background-position: -300px -500px;
+}
+
+.support-returns a:hover {
+    background-position: -200px -500px;
+}
+
+.support-track a:hover {
+    background-position: -100px -500px;
+}
+
+.support.main-container > div h3 {
+    text-transform: uppercase;
+    font-size: 21px;
+}
+
+.support.main-container > div p {
+    padding: 0 10px 0 10px;
+}
 /* ================= end support Main ================= */
+
+/* =========== start support sub pages Main =========== */
+.support.main-container nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0 0;
+    text-align: left;
+    width: 240px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.support.main-container > nav ul li {
+    margin-bottom: 25px;
+}
+
+.support.main-container nav ul li a {
+    font-size: 21px;
+    font-weight: 600;
+    color: #75706c;
+}
+
+.support-current {
+    color: #24201c;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.support nav {
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+}
+
+.support-content {
+    color: #75706c;
+    text-align: left;
+    float: right;
+    width: 720px !important;
+    margin: 50px 0 45px 0 !important;
+}
+
+.support-content p {
+    margin: 0;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.support-content label {
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.support-content > div input {
+    display: none;
+}
+
+.ac-content {
+    height: 0;
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    margin: 2px 0 20px 3px;
+}
+
+.support-content > div input:checked ~ .ac-content {
+    height: auto;
+}
+
+.ac-caret {
+    background-position: -100px -150px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px 0 10px;
+}
+
+.support-content > div input:checked ~ .ac-caret {
+    background-position: -200px -150px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.support-content form {
+    color: #423c3c;
+    font-size: 14px;
+    width: 48%;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 35px;
+    vertical-align: top;
+    height: 50px;
+}
+
+.support-content input {
+    width: 100px;
+    height: 100px;
+}
+/* ============ end support sub pages Main ============ */
+
+
+
+
+
+
+
+
 
 
 
