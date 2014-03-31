@@ -30,7 +30,8 @@ a {
 .footer-logo, .gallery-left, .gallery-right, .ac-caret,
 .instagram, .facebook, .twitter, .pinterest,
 .shipping-icon, .shipping-right, .support-shipping a,
-.support-faq a, .support-returns a, .support-track a {
+.support-faq a, .support-returns a, .support-track a,
+.personalize-icon, .product-content > form select {
     background: url(assets/spritesheet.png) no-repeat 0 0;
 }
 
@@ -927,6 +928,117 @@ footer > hr {
     height: 220px;
 }
 /* =============== end child-category Main ============== */
+
+/* ================= start product Main ================= */
+.product-container > div {
+    float: left;
+}
+
+.product-thumbnail {
+    margin: 0 20px 0 20px;
+}
+
+.product-content {
+    width: 320px;
+    text-align: left;
+}
+
+.product-content h2 {
+    margin: 0 0 25px 0;
+    font-size: 28px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.product-content h4 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    margin: 0;
+}
+
+.product-content p {
+    margin: 5px 0 0 0;
+    line-height: 20px;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 28px;
+    margin: 25px 90px 20px 0;
+}
+
+.product-content > form h3, .product-content > form h4,
+.product-content > form select {
+    float: left;
+}
+
+.product-content > form h4, .product-content > form select {
+    margin: 32px 20px 0 0;
+}
+
+.product-content > form select {
+    background-position: 15px -500px;
+    background-color: transparent;
+    overflow: hidden;
+    -webkit-appearance: none;
+    width: 35px;
+    height: 20px;
+    border: 0;
+    border-radius: 0;
+}
+
+.product-content input {
+    display: block;
+    width: 300px;
+    height: 40px;
+    color: #fcf9f4;
+    text-transform: uppercase;
+    background-color: #d57626;
+    font-weight: 500;
+    font-size: 21px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "Alegreya Sans SC", sans-serif;
+    letter-spacing: 1px;
+}
+
+.personalize-icon {
+    background-position: -500px -400px;
+    width: 106px;
+    height: 106px;
+    margin: 25px 10px 25px 0;
+    float: left;
+}
+
+.personalize-info {
+    display: inline-block;
+    width: 175px;
+    float: left;
+    margin-top: 40px;
+}
+
+.personalize-info p {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.product-info, .other-products {
+    font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.other-products h4 {
+    margin: 30px 0 10px 0;
+    text-align: left;
+}
+
+.other-products img {
+    margin: 0 20px 30px 0;
+}
+
+.other-products img:last-child {
+    margin-right: 0;
+}
+/* ================== end product Main ================== */
 
 /* ================== start about Main ================== */
 .about-banner {
