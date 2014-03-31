@@ -58,7 +58,7 @@ a {
 }
 
 .header-border {
-    background-color: #fcf9f4;
+    background-color: #c8c3bf;
     position: relative;
     height: 1px;
 }
@@ -66,7 +66,7 @@ a {
 .header-border:before, .header-border:after {
     content: "";
     position: absolute;
-    background: #fcf9f4;
+    background: #c8c3bf;
     top: 0;
     bottom: 0;
     width: 9999px;
@@ -151,7 +151,7 @@ nav > a:hover, nav > a:active {
     position: absolute;
     z-index: 999;
     top: 5px;
-    background-color: #222021;
+    background-color: #201205;
 }
 
 .social-media {
@@ -294,26 +294,35 @@ nav > a:hover, nav > a:active {
     margin: 0 auto;
 }
 
-.gallery-images > div, .parent-images > div {
+.gallery-images > div {
+    height: 220px;
+}
+
+.gallery-images > div, .parent-images > div,
+.child-images > div {
     float: left;
     margin: 20px 20px 0 0;
     background: #d57626;
     position: relative;
 }
 
-.gallery-images > div:last-child, .parent-images > div:last-child {
+.gallery-images > div:last-child, .parent-images > div:last-child,
+.child-images > div:last-child {
     margin-right: 0;
 }
 
-.gallery-images img, .parent-images img {
+.gallery-images img, .parent-images img, ,
+.child-images img {
     display: block;
 }
 
-.gallery-images > div:hover img, .parent-images > div:hover img  {
+.gallery-images > div:hover img, .parent-images > div:hover img,
+.child-images > div:hover img  {
     opacity: .15;
 }
 
-.gallery-images > div > span, .parent-images > div > span  {
+.gallery-images > div > span, .parent-images > div > span,
+.child-images > div > span  {
     display: none;
     position: absolute;
     width: 100%;
@@ -325,7 +334,8 @@ nav > a:hover, nav > a:active {
     text-transform: uppercase;
 }
 
-.gallery-images > div:hover > span, .parent-images > div:hover > span {
+.gallery-images > div:hover > span, .parent-images > div:hover > span,
+.child-images > div:hover > span {
     display: block;
 }
 
@@ -472,19 +482,19 @@ nav > a:hover, nav > a:active {
     opacity: 0.7;
 }
 
-.product {
+.products {
     position: relative;
     margin-top: 30px;
 }
 
-.product a {
+.products a {
     font-family: "Alegreya Sans", sans-serif;
     font-style: italic;
     font-size: 28px;
     color: #a2a09e;
 }
 
-.product h2 {
+.products h2 {
     font-family: "Alegreya Sans", sans-serif;
     font-style: normal;
     font-size: 37px;
@@ -494,14 +504,14 @@ nav > a:hover, nav > a:active {
     margin: 5px 0 5px 0;
 }
 
-.product hr {
+.products hr {
     border: 0;
     border-top: 3px solid #a2a09e;
     width: 240px;
     margin: 0 auto 15px auto;
 }
 
-.product hr:first-child {
+.products hr:first-child {
     margin: 15px auto 0 auto;
 }
 
@@ -817,6 +827,7 @@ footer > hr {
     color: #423c3c;
     margin: 40px 0 30px 0;
     word-spacing: 3px;
+    text-align: left;
 }
 
 .secondary-nav a {
@@ -898,6 +909,24 @@ footer > hr {
     display: inline-block;
 }
 /* ============== end parent-category Main ============== */
+
+/* ============== start child-category Main ============= */
+.child-banner {
+    background: url(assets/athlete-surfing.jpg) no-repeat 0 0;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: 100%;
+    height: 140px;
+    display: block;
+    margin: 0 auto;
+}
+
+.child-images > div {
+    height: 220px;
+}
+/* =============== end child-category Main ============== */
 
 /* ================== start about Main ================== */
 .about-banner {
@@ -1204,9 +1233,6 @@ footer > hr {
 }
 
 .support-content form {
-    color: #423c3c;
-    font-size: 14px;
-    width: 48%;
     display: inline-block;
     letter-spacing: 1px;
     text-align: left;
@@ -1215,9 +1241,54 @@ footer > hr {
     height: 50px;
 }
 
-.support-content input {
-    width: 100px;
-    height: 100px;
+.support-content ::-webkit-input-placeholder {
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-size: 14px;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.support-content :-moz-placeholder { /* Firefox 18- */
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.support-content ::-moz-placeholder {  /* Firefox 19+ */
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.support-content :-ms-input-placeholder {
+    color: #423c3c;
+    opacity: 1;
+    font-style: italic;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.support-content input:nth-of-type(1) {
+    width: 332px;
+    height: 36px;
+    padding-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #919191;
+}
+
+.support-content input:nth-of-type(2) {
+    width: 175px;
+    height: 40px;
+    color: #d2d0cd;
+    padding: 0;
+    text-transform: uppercase;
+    background-color: #d57626;
+    font-weight: 600;
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
 }
 /* ============ end support sub pages Main ============ */
 
