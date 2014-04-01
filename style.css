@@ -31,7 +31,10 @@ a {
 .instagram, .facebook, .twitter, .pinterest,
 .shipping-icon, .shipping-right, .support-shipping a,
 .support-faq a, .support-returns a, .support-track a,
-.personalize-icon, .product-content > form select {
+.personalize-icon, .product-content > form select,
+.create-account input[type=checkbox] + label span,
+.account-info input[type=checkbox] + label span, 
+.gift-finder-icon, .gift-amount-icon {
     background: url(assets/spritesheet.png) no-repeat 0 0;
 }
 
@@ -300,7 +303,7 @@ nav > a:hover, nav > a:active {
 }
 
 .gallery-images > div, .parent-images > div,
-.child-images > div {
+.child-images > div, .search-results > div {
     float: left;
     margin: 20px 20px 0 0;
     background: #d57626;
@@ -308,22 +311,22 @@ nav > a:hover, nav > a:active {
 }
 
 .gallery-images > div:last-child, .parent-images > div:last-child,
-.child-images > div:last-child {
+.child-images > div:last-child, .search-results > div:last-child {
     margin-right: 0;
 }
 
 .gallery-images img, .parent-images img, ,
-.child-images img {
+.child-images img, .search-results img{
     display: block;
 }
 
 .gallery-images > div:hover img, .parent-images > div:hover img,
-.child-images > div:hover img  {
+.child-images > div:hover img, .search-results > div:hover img {
     opacity: .15;
 }
 
 .gallery-images > div > span, .parent-images > div > span,
-.child-images > div > span  {
+.child-images > div > span, .search-results > div > span {
     display: none;
     position: absolute;
     width: 100%;
@@ -336,7 +339,7 @@ nav > a:hover, nav > a:active {
 }
 
 .gallery-images > div:hover > span, .parent-images > div:hover > span,
-.child-images > div:hover > span {
+.child-images > div:hover > span, .search-results > div:hover > span {
     display: block;
 }
 
@@ -924,8 +927,12 @@ footer > hr {
     margin: 0 auto;
 }
 
-.child-images > div {
+.child-images > div, .search-results > div {
     height: 220px;
+}
+
+.child-images > div:last-child, .search-results > div:last-child {
+    margin-bottom: 30px;
 }
 /* =============== end child-category Main ============== */
 
@@ -975,11 +982,14 @@ footer > hr {
     margin: 32px 20px 0 0;
 }
 
+/* TODO select arrow, currently not supported by all major browsers */
 .product-content > form select {
     background-position: 15px -500px;
     background-color: transparent;
     overflow: hidden;
     -webkit-appearance: none;
+       -moz-appearance: none;
+    appearance: none;
     width: 35px;
     height: 20px;
     border: 0;
@@ -1075,15 +1085,14 @@ footer > hr {
     text-align: center;
 }
 
-.about.main-container > hr, .contact.main-container > hr,
-.support.main-container > hr {
+.main-container > hr {
     border: 0;
     border-top: 3px solid #a2a09e;
     width: 960px;
     margin: 0;
 }
 
-.about.main-container > hr:nth-of-type(3) {
+.main-container > hr:nth-of-type(3) {
     width: 622px;
     display: inline-block;
     margin-top: 20px;
@@ -1152,32 +1161,52 @@ footer > hr {
     margin: 15px 0 0 0;
 }
 
-.contact-forms ::-webkit-input-placeholder {
+.contact-forms ::-webkit-input-placeholder,
+.account-content > div > form ::-webkit-input-placeholder,
+.gifting-options form ::-webkit-input-placeholder,
+.support-content ::-webkit-input-placeholder,
+.account-subcontent ::-webkit-input-placeholder {
     color: #423c3c;
     opacity: 1;
     font-style: italic;
     font-family: "Alegreya Sans", sans-serif;
+    letter-spacing: 1px;
 }
 
-.contact-forms :-moz-placeholder { /* Firefox 18- */
+.contact-forms :-moz-placeholder,
+.account-content > div > form :-moz-placeholder,
+.gifting-options form :-moz-placeholder,
+.support-content :-moz-placeholder,
+.account-subcontent :-moz-placeholder { /* Firefox 18- */
     color: #423c3c;
     opacity: 1;
     font-style: italic;
     font-family: "Alegreya Sans", sans-serif;
+    letter-spacing: 1px;
 }
 
-.contact-forms ::-moz-placeholder {  /* Firefox 19+ */
+.contact-forms ::-moz-placeholder,
+.account-content > div > form ::-moz-placeholder,
+.gifting-options form ::-moz-placeholder,
+.support-content ::-moz-placeholder,
+.account-subcontent ::-moz-placeholder {  /* Firefox 19+ */
     color: #423c3c;
     opacity: 1;
     font-style: italic;
     font-family: "Alegreya Sans", sans-serif;
+    letter-spacing: 1px;
 }
 
-.contact-forms :-ms-input-placeholder {
+.contact-forms :-ms-input-placeholder,
+.account-content > div > form :-ms-input-placeholder,
+.gifting-options form :-ms-input-placeholder,
+.support-content ::-ms-input-placeholder,
+.account-subcontent ::-ms-input-placeholder {
     color: #423c3c;
     opacity: 1;
     font-style: italic;
     font-family: "Alegreya Sans", sans-serif;
+    letter-spacing: 1px;
 }
 
 .contact-forms input:nth-of-type(even), .contact-forms input:nth-of-type(5) {
@@ -1260,7 +1289,8 @@ footer > hr {
 /* ================= end support Main ================= */
 
 /* =========== start support sub pages Main =========== */
-.support.main-container nav ul {
+.support.main-container nav ul,
+.account-page.main-container nav ul {
     list-style: none;
     padding: 0;
     margin: 50px 0 0 0;
@@ -1270,29 +1300,31 @@ footer > hr {
     letter-spacing: .5px;
 }
 
-.support.main-container > nav ul li {
+.support.main-container > nav ul li,
+.account-page.main-container > nav ul li {
     margin-bottom: 25px;
 }
 
-.support.main-container nav ul li a {
+.support.main-container nav ul li a,
+.account-page.main-container nav ul li a {
     font-size: 21px;
     font-weight: 600;
     color: #75706c;
 }
 
-.support-current {
+.support-current, .account-current {
     color: #24201c;
     font-size: 21px;
     font-weight: 600;
 }
 
-.support nav {
+.support nav, .account-page nav {
     display: inline-block;
     float: left;
     vertical-align: top;
 }
 
-.support-content {
+.support-content, .account-subcontent {
     color: #75706c;
     text-align: left;
     float: right;
@@ -1300,7 +1332,7 @@ footer > hr {
     margin: 50px 0 45px 0 !important;
 }
 
-.support-content p {
+.support-content p, .account-subcontent p {
     margin: 0;
     font-weight: 300;
     line-height: 20px;
@@ -1353,36 +1385,8 @@ footer > hr {
     height: 50px;
 }
 
-.support-content ::-webkit-input-placeholder {
-    color: #423c3c;
-    opacity: 1;
-    font-style: italic;
-    font-size: 14px;
-    font-family: "Alegreya Sans", sans-serif;
-}
-
-.support-content :-moz-placeholder { /* Firefox 18- */
-    color: #423c3c;
-    opacity: 1;
-    font-style: italic;
-    font-family: "Alegreya Sans", sans-serif;
-}
-
-.support-content ::-moz-placeholder {  /* Firefox 19+ */
-    color: #423c3c;
-    opacity: 1;
-    font-style: italic;
-    font-family: "Alegreya Sans", sans-serif;
-}
-
-.support-content :-ms-input-placeholder {
-    color: #423c3c;
-    opacity: 1;
-    font-style: italic;
-    font-family: "Alegreya Sans", sans-serif;
-}
-
-.support-content input:nth-of-type(1) {
+.support-content input:nth-of-type(1),
+.account-subcontent input:nth-of-type(1) {
     width: 332px;
     height: 36px;
     padding-left: 10px;
@@ -1390,7 +1394,8 @@ footer > hr {
     border: 1px solid #919191;
 }
 
-.support-content input:nth-of-type(2) {
+.support-content input:nth-of-type(2),
+.account-subcontent input:nth-of-type(2) {
     width: 175px;
     height: 40px;
     color: #d2d0cd;
@@ -1404,7 +1409,411 @@ footer > hr {
 }
 /* ============ end support sub pages Main ============ */
 
+/* =========== start account-page Main =========== */
+.account-page.main-container {
+    margin-top: 70px;
+}
 
+.account-content > div {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    color: #414141;
+}
+
+.account-content > div h2 {
+    margin: 45px 0 20px 0;
+    font-size: 30px;
+}
+
+.account-content > div p {
+    padding: 0 5px 0 5px;
+    height: 80px;
+    line-height: 20px;
+}
+
+.account-content > div a {
+    color: #414141;
+    text-decoration: underline;
+}
+
+.account-content input {
+    width: 252px;
+    height: 26px;
+    font-size: 12px;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #919191;
+    margin: 15px 0 0 0;
+}
+
+.create-account input:nth-of-type(1) {
+    margin-right: 10px;
+}
+
+.create-account input:nth-of-type(-n+2) {
+    width: 112px;
+    height: 26px;
+}
+
+.create-account input[type=checkbox], .account-info input[type=checkbox] {
+    display: none;
+}
+
+.create-account input[type=checkbox] + label,
+.account-info input[type=checkbox] + label {
+    font-size: 12px;
+    font-style: italic;
+    vertical-align: bottom;
+    display: inline-block;
+    letter-spacing: .65px;
+}
+
+.create-account input[type=checkbox] + label span,
+.account-info input[type=checkbox] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-position: -600px 0;
+    vertical-align: middle;
+    margin: 15px 5px -1px -5px;
+    cursor: pointer;
+}
+
+.create-account input[type=checkbox]:checked + label span,
+.account-info input[type=checkbox]:checked + label span {
+    background-position: -650px 0;
+}
+
+.account-content input[type=submit] {
+    width: 140px;
+    height: 30px;
+    padding: 0;
+    text-transform: uppercase;
+    background-color: #d57626;
+    font-size: 14px;
+    border: 0;
+    color: #dad8d5;
+    cursor: pointer;
+}
+
+.account-content {
+    margin-bottom: 30px;
+}
+/* ============ end account-page Main ============ */
+
+/* ====== start account-page subpages Main ======= */
+.account-subcontent {
+    color: #414141;
+}
+
+.account-subcontent h2 {
+    font-size: 30px;
+    margin: 0 0 15px 0;
+}
+
+.account-subcontent > p {
+    font-style: italic;
+    color: #423c3c;
+    letter-spacing: 1px;
+}
+
+.account-subcontent > p span {
+    color: #d57626;
+}
+
+.account-info, .billing-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 325px;
+}
+
+.account-info h3, .billing-info h3 {
+    margin: 45px 0 35px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.account-info p, .billing-info p,
+.primary-address p, .additional-addresses p {
+    margin-bottom: 20px;
+}
+
+.account-info input[type=checkbox] + label {
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.account-info input[type=checkbox] + label span {
+    background-position: -600px -50px;
+    width: 25px;
+    height: 25px;
+    margin: 0 0 -3px 0;
+}
+
+.account-info input[type=checkbox]:checked + label span {
+    background-position: -650px -50px;
+}
+
+.account-subcontent input[type=button] {
+    display: block;
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    color: #d8d6d3;
+    text-transform: uppercase;
+    background-color: #201205;
+    font-weight: 600;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.account-info input:nth-of-type(3),
+.billing-info input:nth-of-type(2),
+.additional-addresses input:nth-of-type(2) {
+    width: 175px;
+    margin-top: 20px;
+}
+
+.primary-address, .additional-addresses {
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+}
+
+.account-subcontent ul {
+    margin: 0;
+    padding: 0;
+}
+
+.account-subcontent ul li {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.account-subcontent ul li:nth-of-type(1) {
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+}
+
+.account-subcontent ul li > span:nth-of-type(odd) {
+    width: 130px;
+    display: inline-block;
+}
+
+.account-subcontent ul li > span:nth-of-type(2) {
+    width: 100px;
+    display: inline-block;
+}
+
+.account-subcontent ul li:nth-of-type(n+2) > span:nth-of-type(3) {
+    font-family: "Lato", serif;
+}
+
+.order-status {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.order-status a {
+    color: #d57626;
+    text-decoration: underline;
+}
+
+.order-status span {
+    width: 90px;
+    display: inline-block;
+}
+
+.vert-divider {
+    width: 20px !important;
+}
+/* ======= end account-page subpages Main ======== */
+
+/* =========== start search-page Main ============ */
+.result-heading {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.result-heading h2 {
+    display: inline-block;
+    font-size: 21px;
+    color: #423c3c;
+    margin: 30px 40px 20px 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.result-heading a {
+    color: #423c3c;
+    font-style: italic;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+/* ============ end search-page Main ============= */
+
+/* ============= start gifting Main ============== */
+.gifting.main-container {
+    margin-top: 70px;
+}
+
+.gifting.main-container > h2 {
+    margin: 35px auto 0 auto;
+    font-size: 37px;
+    font-weight: 500;
+    width: 550px;
+    letter-spacing: .5px;
+}
+
+.gifting.main-container > p {
+    width: 622px;
+    margin: 0 auto;
+    letter-spacing: .5px;
+    line-height: 22px;
+    margin: 25px auto 30px auto;
+}
+
+.gifting-options {
+    margin-bottom: 30px;
+}
+
+.gift-finder, .gift-amount {
+    display: inline-block;
+    width: 48%;
+    color: #423c3c;
+    vertical-align: top;
+}
+
+.gift-finder-icon, .gift-amount-icon {
+    width: 109px;
+    height: 109px;
+    margin: 0 auto;
+}
+
+.gift-finder-icon {
+    background-position: -600px -100px;
+}
+
+.gift-amount-icon {
+    background-position: -600px -250px;
+}
+
+.gifting-options h4 {
+    font-style: italic;
+    font-size: 21px;
+    margin: 20px 0 5px 0;
+}
+
+.gifting-options input, .gifting-options textarea {
+    font-size: 14px;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #919191;
+    margin: 15px 0 0 0;
+}
+
+.gift-finder form :-moz-placeholder {
+    color: #c5c0bc;
+}
+
+.gift-finder form ::-moz-placeholder {
+    color: #c5c0bc;
+}
+
+.gift-finder form ::-webkit-input-placeholder {
+    color: #c5c0bc;
+}
+
+.gift-finder form :-ms-input-placeholder {
+    color: #c5c0bc;
+}
+
+.gift-finder input:nth-of-type(1) {
+    width: 300px;
+    height: 40px;
+}
+
+.gift-finder input:nth-of-type(2) {
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #d57626;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.amount-input {
+    border: 1px inset #919191;
+    display: inline-block;
+    background-color: #fff;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+.gift-amount input:first-child {
+    border: 0;
+    margin: 0;
+    width: 50px;
+    height: 36px;
+}
+
+.gift-amount span:not(.amount-input) {
+    width: 220px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.gift-amount input:not(:first-child) {
+    width: 207px;
+    height: 36px;
+}
+
+.gift-amount input:not(:first-child):nth-of-type(even) {
+    margin-left: 15px;
+}
+
+.gift-amount textarea {
+    width: 446px;
+    height: 66px;
+    padding-top: 10px;
+}
+
+.gift-amount input:nth-of-type(5) {
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #d57626;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+/* ============== end gifting Main =============== */
 
 
 
